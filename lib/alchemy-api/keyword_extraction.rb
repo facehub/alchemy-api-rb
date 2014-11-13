@@ -9,7 +9,8 @@ module AlchemyAPI
     private
 
     def indexer
-      'keywords'
+      # 'keywords'
+      nil
     end
   end
 end
