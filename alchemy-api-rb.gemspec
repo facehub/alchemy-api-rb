@@ -16,8 +16,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = AlchemyAPI::VERSION
 
-  gem.add_dependency             'faraday',             '~> 0.9.x'
-  gem.add_dependency             'excon',               '~> 0.38.x'
+  gem.add_dependency             'faraday',             '~> 0.9'
+  gem.add_dependency             'excon',               '~> 0.38'
 
   gem.add_development_dependency 'minitest',            '~> 5.4.0'
   gem.add_development_dependency 'pry',                 '~> 0.10.0'
