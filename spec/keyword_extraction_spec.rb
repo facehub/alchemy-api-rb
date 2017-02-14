@@ -27,20 +27,28 @@ describe AlchemyAPI, 'keyword_extraction' do
         end
 
         describe "#{type} search with #{output_mode} results" do
-          it 'returns an array of results' do
+          it 'returns an array of keywords' do
             VCR.use_cassette("keyword_basic_#{type}_#{output_mode}_search") do
               result = subject.search(type => value)
 
-              result.must_be_instance_of Array
+              result['keywords'].must_be_instance_of Array
+            end
+          end
+
+          it 'returns a string with language' do
+            VCR.use_cassette("keyword_basic_#{type}_#{output_mode}_search") do
+              result = subject.search(type => value)
+
+              result['language'].must_be_instance_of String
             end
           end
 
           it 'includes the keyword text and relavence' do
             VCR.use_cassette("keyword_basic_#{type}_#{output_mode}_search") do
-              result = subject.search(type => value)[0]
+              result = subject.search(type => value)
 
-              result['text'].wont_be_nil
-              result['relevance'].wont_be_nil
+              result['keywords'][0]['text'].wont_be_nil
+              result['keywords'][0]['relevance'].wont_be_nil
             end
           end
         end
