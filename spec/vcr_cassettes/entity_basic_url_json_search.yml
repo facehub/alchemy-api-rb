@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&outputMode=json&url=http%3A%2F%2Fwww.google.com
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,26 +16,24 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:00:57 GMT
+      - Wed, 07 Jun 2017 09:22:47 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2195'
+      - '2196'
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Key:
       - ALCHEMY_KEY
       X-Alchemyapi-Params:
       - sentiment=0&knowledgeGraph=0&detectedLanguage=english&submitLanguage=detect
       X-Alchemyapi-Raw-Content-Size:
-      - '46247'
+      - '46853'
       X-Alchemyapi-Requested-Url:
       - http://www.google.com
       X-Alchemyapi-Retrieved-Url:
@@ -43,11 +41,25 @@ http_interactions:
       X-Alchemyapi-Status:
       - OK
       X-Alchemyapi-Text-Content-Size:
-      - '430'
+      - '493'
       X-Alchemyapi-Total-Transactions:
       - '1'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -55,7 +67,7 @@ http_interactions:
         by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
         \   \"url\": \"http://www.google.com/\",\r\n    \"language\": \"english\",\r\n
         \   \"entities\": [\r\n        {\r\n            \"type\": \"Company\",\r\n
-        \           \"relevance\": \"0.936146\",\r\n            \"count\": \"2\",\r\n
+        \           \"relevance\": \"0.896164\",\r\n            \"count\": \"3\",\r\n
         \           \"text\": \"Google\",\r\n            \"disambiguated\": {\r\n
         \               \"subType\": [\r\n                    \"AcademicInstitution\",\r\n
         \                   \"AwardPresentingOrganization\",\r\n                    \"OperatingSystemDeveloper\",\r\n
@@ -66,9 +78,9 @@ http_interactions:
         \"http://rdf.freebase.com/ns/m.045c7b\",\r\n                \"yago\": \"http://yago-knowledge.org/resource/Google\",\r\n
         \               \"crunchbase\": \"http://www.crunchbase.com/company/google\"\r\n
         \           }\r\n        },\r\n        {\r\n            \"type\": \"FieldTerminology\",\r\n
-        \           \"relevance\": \"0.75397\",\r\n            \"count\": \"1\",\r\n
+        \           \"relevance\": \"0.517931\",\r\n            \"count\": \"1\",\r\n
         \           \"text\": \"Advanced search\"\r\n        },\r\n        {\r\n            \"type\":
-        \"Company\",\r\n            \"relevance\": \"0.529672\",\r\n            \"count\":
+        \"Company\",\r\n            \"relevance\": \"0.379303\",\r\n            \"count\":
         \"1\",\r\n            \"text\": \"YouTube\",\r\n            \"disambiguated\":
         {\r\n                \"subType\": [\r\n                    \"Website\",\r\n
         \                   \"BroadcastDistributor\",\r\n                    \"FilmDistributor\",\r\n
@@ -80,5 +92,5 @@ http_interactions:
         \               \"crunchbase\": \"http://www.crunchbase.com/company/youtube\"\r\n
         \           }\r\n        }\r\n    ]\r\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:00:57 GMT
+  recorded_at: Wed, 07 Jun 2017 09:22:47 GMT
 recorded_with: VCR 2.9.3

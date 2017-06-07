@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&outputMode=json&url=http%3A%2F%2Fwww.google.com
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,26 +16,24 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:01:10 GMT
+      - Wed, 07 Jun 2017 09:23:10 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '6335'
+      - '8195'
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Key:
       - ALCHEMY_KEY
       X-Alchemyapi-Params:
       - sentiment=0&knowledgeGraph=0&combinedCalls=concept,taxonomy,entity,keyword&detectedLanguage=english&submitLanguage=detect
       X-Alchemyapi-Raw-Content-Size:
-      - '46246'
+      - '46892'
       X-Alchemyapi-Requested-Url:
       - http://www.google.com
       X-Alchemyapi-Retrieved-Url:
@@ -43,11 +41,25 @@ http_interactions:
       X-Alchemyapi-Status:
       - OK
       X-Alchemyapi-Text-Content-Size:
-      - '430'
+      - '493'
       X-Alchemyapi-Total-Transactions:
       - '4'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -55,27 +67,47 @@ http_interactions:
         by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
         \   \"url\": \"http://www.google.com/\",\r\n    \"totalTransactions\": \"4\",\r\n
         \   \"language\": \"english\",\r\n    \"concepts\": [\r\n        {\r\n            \"text\":
-        \"Google\",\r\n            \"relevance\": \"0.92163\",\r\n            \"website\":
+        \"Google\",\r\n            \"relevance\": \"0.987939\",\r\n            \"website\":
         \"http://www.google.com/\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Google\",\r\n
         \           \"freebase\": \"http://rdf.freebase.com/ns/m.045c7b\",\r\n            \"yago\":
         \"http://yago-knowledge.org/resource/Google\",\r\n            \"crunchbase\":
         \"http://www.crunchbase.com/company/google\"\r\n        },\r\n        {\r\n
-        \           \"text\": \"World Wide Web\",\r\n            \"relevance\": \"0.709538\",\r\n
-        \           \"dbpedia\": \"http://dbpedia.org/resource/World_Wide_Web\",\r\n
+        \           \"text\": \"Google services\",\r\n            \"relevance\": \"0.746393\",\r\n
+        \           \"dbpedia\": \"http://dbpedia.org/resource/Google_services\"\r\n
+        \       },\r\n        {\r\n            \"text\": \"Picasa\",\r\n            \"relevance\":
+        \"0.686624\",\r\n            \"website\": \"http://picasa.google.com/\",\r\n
+        \           \"dbpedia\": \"http://dbpedia.org/resource/Picasa\",\r\n            \"freebase\":
+        \"http://rdf.freebase.com/ns/m.03fh40\",\r\n            \"yago\": \"http://yago-knowledge.org/resource/Picasa\"\r\n
+        \       },\r\n        {\r\n            \"text\": \"Gmail\",\r\n            \"relevance\":
+        \"0.640156\",\r\n            \"website\": \"https://mail.google.com/\",\r\n
+        \           \"dbpedia\": \"http://dbpedia.org/resource/Gmail\",\r\n            \"freebase\":
+        \"http://rdf.freebase.com/ns/m.02q_bk\",\r\n            \"yago\": \"http://yago-knowledge.org/resource/Gmail\"\r\n
+        \       },\r\n        {\r\n            \"text\": \"World Wide Web\",\r\n            \"relevance\":
+        \"0.627317\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/World_Wide_Web\",\r\n
         \           \"freebase\": \"http://rdf.freebase.com/ns/m.0828v\",\r\n            \"yago\":
         \"http://yago-knowledge.org/resource/World_Wide_Web\"\r\n        },\r\n        {\r\n
-        \           \"text\": \"Google services\",\r\n            \"relevance\": \"0.669692\",\r\n
-        \           \"dbpedia\": \"http://dbpedia.org/resource/Google_services\"\r\n
-        \       },\r\n        {\r\n            \"text\": \"Web 2.0\",\r\n            \"relevance\":
-        \"0.618786\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Web_2.0\",\r\n
+        \           \"text\": \"2002 albums\",\r\n            \"relevance\": \"0.612234\",\r\n
+        \           \"dbpedia\": \"http://dbpedia.org/resource/2002_albums\"\r\n        },\r\n
+        \       {\r\n            \"text\": \"Photography\",\r\n            \"relevance\":
+        \"0.600643\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Photography\",\r\n
+        \           \"freebase\": \"http://rdf.freebase.com/ns/m.05wkw\"\r\n        },\r\n
+        \       {\r\n            \"text\": \"Photograph\",\r\n            \"relevance\":
+        \"0.580428\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Photograph\",\r\n
+        \           \"freebase\": \"http://rdf.freebase.com/ns/m.068jd\",\r\n            \"opencyc\":
+        \"http://sw.opencyc.org/concept/Mx4rvVjZ7ZwpEbGdrcN5Y29ycA\"\r\n        },\r\n
+        \       {\r\n            \"text\": \"Image\",\r\n            \"relevance\":
+        \"0.579871\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Image\",\r\n
+        \           \"freebase\": \"http://rdf.freebase.com/ns/m.0jg24\"\r\n        },\r\n
+        \       {\r\n            \"text\": \"Web 2.0\",\r\n            \"relevance\":
+        \"0.548345\",\r\n            \"dbpedia\": \"http://dbpedia.org/resource/Web_2.0\",\r\n
         \           \"freebase\": \"http://rdf.freebase.com/ns/m.05b058\",\r\n            \"yago\":
         \"http://yago-knowledge.org/resource/Web_2.0\"\r\n        },\r\n        {\r\n
-        \           \"text\": \"IPhone\",\r\n            \"relevance\": \"0.602144\",\r\n
+        \           \"text\": \"IPhone\",\r\n            \"relevance\": \"0.521458\",\r\n
         \           \"dbpedia\": \"http://dbpedia.org/resource/IPhone\",\r\n            \"freebase\":
         \"http://rdf.freebase.com/ns/m.027lnzs\",\r\n            \"yago\": \"http://yago-knowledge.org/resource/IPhone\"\r\n
         \       }\r\n    ],\r\n    \"entities\": [\r\n        {\r\n            \"type\":
-        \"Company\",\r\n            \"relevance\": \"0.936146\",\r\n            \"count\":
-        \"2\",\r\n            \"text\": \"Google\",\r\n            \"disambiguated\":
+        \"Company\",\r\n            \"relevance\": \"0.896164\",\r\n            \"count\":
+        \"3\",\r\n            \"text\": \"Google\",\r\n            \"disambiguated\":
         {\r\n                \"subType\": [\r\n                    \"AcademicInstitution\",\r\n
         \                   \"AwardPresentingOrganization\",\r\n                    \"OperatingSystemDeveloper\",\r\n
         \                   \"ProgrammingLanguageDeveloper\",\r\n                    \"SoftwareDeveloper\",\r\n
@@ -85,9 +117,9 @@ http_interactions:
         \"http://rdf.freebase.com/ns/m.045c7b\",\r\n                \"yago\": \"http://yago-knowledge.org/resource/Google\",\r\n
         \               \"crunchbase\": \"http://www.crunchbase.com/company/google\"\r\n
         \           }\r\n        },\r\n        {\r\n            \"type\": \"FieldTerminology\",\r\n
-        \           \"relevance\": \"0.75397\",\r\n            \"count\": \"1\",\r\n
+        \           \"relevance\": \"0.517931\",\r\n            \"count\": \"1\",\r\n
         \           \"text\": \"Advanced search\"\r\n        },\r\n        {\r\n            \"type\":
-        \"Company\",\r\n            \"relevance\": \"0.529672\",\r\n            \"count\":
+        \"Company\",\r\n            \"relevance\": \"0.379303\",\r\n            \"count\":
         \"1\",\r\n            \"text\": \"YouTube\",\r\n            \"disambiguated\":
         {\r\n                \"subType\": [\r\n                    \"Website\",\r\n
         \                   \"BroadcastDistributor\",\r\n                    \"FilmDistributor\",\r\n
@@ -99,40 +131,44 @@ http_interactions:
         \               \"crunchbase\": \"http://www.crunchbase.com/company/youtube\"\r\n
         \           }\r\n        }\r\n    ],\n    \"taxonomy\": [\n        {\n            \"label\":
         \"/technology and computing/internet technology/email\",\n            \"score\":
-        \"0.641823\"\n        },\n        {\n            \"label\": \"/art and entertainment/books
-        and literature\",\n            \"score\": \"0.500349\"\n        },\n        {\n
+        \"0.574198\"\n        },\n        {\n            \"label\": \"/art and entertainment/books
+        and literature\",\n            \"score\": \"0.533415\"\n        },\n        {\n
         \           \"label\": \"/technology and computing/internet technology/social
-        network\",\n            \"score\": \"0.500224\"\n        }\n    ],\n    \"keywords\":
-        [\n        {\n            \"relevance\": \"0.998205\",\n            \"text\":
+        network\",\n            \"score\": \"0.447482\"\n        }\n    ],\n    \"keywords\":
+        [\n        {\n            \"relevance\": \"0.988006\",\n            \"text\":
+        \"Google\\n Google+\"\n        },\n        {\n            \"relevance\": \"0.941866\",\n
+        \           \"text\": \"quick photo books\"\n        },\n        {\n            \"relevance\":
+        \"0.930723\",\n            \"text\": \"Advertising\\u00A0Programs Business\"\n
+        \       },\n        {\n            \"relevance\": \"0.922242\",\n            \"text\":
         \"Advanced search Language\"\n        },\n        {\n            \"relevance\":
-        \"0.994025\",\n            \"text\": \"Advertising\\u00A0Programs Business\"\n
-        \       },\n        {\n            \"relevance\": \"0.936368\",\n            \"text\":
-        \"Google\\n Google+\"\n        },\n        {\n            \"relevance\": \"0.827103\",\n
+        \"0.844231\",\n            \"text\": \"Google Photos\"\n        },\n        {\n
+        \           \"relevance\": \"0.839129\",\n            \"text\": \"+Google
+        About Google\"\n        },\n        {\n            \"relevance\": \"0.772138\",\n
         \           \"text\": \"YouTube  \\nNews\"\n        },\n        {\n            \"relevance\":
-        \"0.801334\",\n            \"text\": \"+Google About Google\"\n        },\n
-        \       {\n            \"relevance\": \"0.722936\",\n            \"text\":
-        \"Search settings\"\n        },\n        {\n            \"relevance\": \"0.696956\",\n
-        \           \"text\": \"Finance \\nPhotos\"\n        },\n        {\n            \"relevance\":
-        \"0.684559\",\n            \"text\": \"Account Options\"\n        },\n        {\n
-        \           \"relevance\": \"0.682571\",\n            \"text\": \"Web History\"\n
-        \       },\n        {\n            \"relevance\": \"0.49099\",\n            \"text\":
-        \"Wallet\"\n        },\n        {\n            \"relevance\": \"0.482966\",\n
-        \           \"text\": \"Gmail\"\n        },\n        {\n            \"relevance\":
-        \"0.465137\",\n            \"text\": \"Docs\"\n        },\n        {\n            \"relevance\":
-        \"0.455968\",\n            \"text\": \"Translate\"\n        },\n        {\n
-        \           \"relevance\": \"0.441582\",\n            \"text\": \"Blogger\"\n
-        \       },\n        {\n            \"relevance\": \"0.404251\",\n            \"text\":
-        \"Privacy\"\n        },\n        {\n            \"relevance\": \"0.368026\",\n
-        \           \"text\": \"Images\"\n        },\n        {\n            \"relevance\":
-        \"0.364239\",\n            \"text\": \"Maps\"\n        },\n        {\n            \"relevance\":
-        \"0.363855\",\n            \"text\": \"Play\"\n        },\n        {\n            \"relevance\":
-        \"0.362442\",\n            \"text\": \"Drive\"\n        },\n        {\n            \"relevance\":
-        \"0.362063\",\n            \"text\": \"Calendar\"\n        },\n        {\n
-        \           \"relevance\": \"0.360932\",\n            \"text\": \"Books\"\n
-        \       },\n        {\n            \"relevance\": \"0.360183\",\n            \"text\":
-        \"Shopping\"\n        },\n        {\n            \"relevance\": \"0.35894\",\n
-        \           \"text\": \"Videos\"\n        },\n        {\n            \"relevance\":
-        \"0.354867\",\n            \"text\": \"Terms\"\n        }\n    ]\r\n}\r\n"
+        \"0.689021\",\n            \"text\": \"Search settings\"\n        },\n        {\n
+        \           \"relevance\": \"0.663211\",\n            \"text\": \"Finance
+        \\nPhotos\"\n        },\n        {\n            \"relevance\": \"0.657415\",\n
+        \           \"text\": \"Account Options\"\n        },\n        {\n            \"relevance\":
+        \"0.656739\",\n            \"text\": \"Web History\"\n        },\n        {\n
+        \           \"relevance\": \"0.462834\",\n            \"text\": \"Wallet\"\n
+        \       },\n        {\n            \"relevance\": \"0.455243\",\n            \"text\":
+        \"Gmail\"\n        },\n        {\n            \"relevance\": \"0.441113\",\n
+        \           \"text\": \"Docs\"\n        },\n        {\n            \"relevance\":
+        \"0.432406\",\n            \"text\": \"Translate\"\n        },\n        {\n
+        \           \"relevance\": \"0.420448\",\n            \"text\": \"Blogger\"\n
+        \       },\n        {\n            \"relevance\": \"0.387342\",\n            \"text\":
+        \"Privacy\"\n        },\n        {\n            \"relevance\": \"0.380129\",\n
+        \           \"text\": \"Father\"\n        },\n        {\n            \"relevance\":
+        \"0.363652\",\n            \"text\": \"Images\"\n        },\n        {\n            \"relevance\":
+        \"0.360143\",\n            \"text\": \"Maps\"\n        },\n        {\n            \"relevance\":
+        \"0.359817\",\n            \"text\": \"Play\"\n        },\n        {\n            \"relevance\":
+        \"0.358646\",\n            \"text\": \"Drive\"\n        },\n        {\n            \"relevance\":
+        \"0.358324\",\n            \"text\": \"Calendar\"\n        },\n        {\n
+        \           \"relevance\": \"0.356725\",\n            \"text\": \"Shopping\"\n
+        \       },\n        {\n            \"relevance\": \"0.355679\",\n            \"text\":
+        \"Videos\"\n        },\n        {\n            \"relevance\": \"0.351243\",\n
+        \           \"text\": \"Easy\"\n        },\n        {\n            \"relevance\":
+        \"0.35118\",\n            \"text\": \"Terms\"\n        }\n    ]\r\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:01:10 GMT
+  recorded_at: Wed, 07 Jun 2017 09:23:10 GMT
 recorded_with: VCR 2.9.3

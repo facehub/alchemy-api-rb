@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&outputMode=json&url=http%3A%2F%2Fwww.google.com
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,26 +16,24 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:00:50 GMT
+      - Wed, 07 Jun 2017 09:22:58 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '817'
+      - '882'
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Key:
       - ALCHEMY_KEY
       X-Alchemyapi-Params:
       - sentiment=0&knowledgeGraph=0&detectedLanguage=english&submitLanguage=detect
       X-Alchemyapi-Raw-Content-Size:
-      - '46188'
+      - '46844'
       X-Alchemyapi-Requested-Url:
       - http://www.google.com
       X-Alchemyapi-Retrieved-Url:
@@ -46,6 +44,20 @@ http_interactions:
       - '1'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -57,9 +69,10 @@ http_interactions:
         \\nMobile \\nBooks \\nWallet \\nShopping \\nBlogger \\nFinance \\nPhotos \\nVideos
         \\nDocs \\n\\n\\nEven more \\u00BB \\n\\n\\n\\n\\n\\n\\n\\n\\nAccount Options\\nSign
         in   \\n\\n  Search settings \\n\\n\\nWeb History \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n
-        \\n\\n\\n \\n\\n\\u00A0 \\n\\n     Advanced search Language tools  \\n\\n\\n\\n\\nAdvertising\\u00A0Programs
+        \\n\\n\\n\\n\\n\\u00A0 \\n\\n     Advanced search Language tools  \\n\\n\\n\\nEasy,
+        quick photo books for Father's Day  from Google Photos. \\n\\n\\nAdvertising\\u00A0Programs
         Business Solutions +Google About Google \\n\\n\\u00A9 2017 - Privacy - Terms
         \\n \\n\\n\\n\\n\\n\"\r\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:00:50 GMT
+  recorded_at: Wed, 07 Jun 2017 09:22:58 GMT
 recorded_with: VCR 2.9.3

@@ -30,16 +30,20 @@ module AlchemyAPI
     end
 
     private
-
+    
+    def get_base_url
+      BASE_URL
+    end
+    
     def check_options(opts)
       @options = opts
 
       fail MissingOptionsError unless options && options.keys
       fail UnsupportedSearchMode unless supported_search_types.include?(mode)
     end
-
+      
     def connection
-      @connection ||= Faraday.new(url: BASE_URL) do |builder|
+      @connection ||= Faraday.new(url: get_base_url) do |builder|
         builder.request :url_encoded
         builder.adapter :excon
       end

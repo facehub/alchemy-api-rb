@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&outputMode=json&url=http%3A%2F%2Fwww.alchemy.com
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,20 +16,18 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:01:31 GMT
+      - Wed, 07 Jun 2017 09:23:02 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '488'
+      - '487'
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Key:
       - ALCHEMY_KEY
       X-Alchemyapi-Params:
@@ -48,6 +46,20 @@ http_interactions:
       - '1'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -55,8 +67,8 @@ http_interactions:
         by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
         \   \"url\": \"https://www.alchemy.com/\",\n    \"totalTransactions\": \"1\",\n
         \   \"language\": \"english\",\n    \"docEmotions\": {\n        \"anger\":
-        \"0.159996\",\n        \"disgust\": \"0.141242\",\n        \"fear\": \"0.158776\",\n
-        \       \"joy\": \"0.447863\",\n        \"sadness\": \"0.475835\"\n    }\n}\r\n"
+        \"0.080387\",\n        \"disgust\": \"0.029697\",\n        \"fear\": \"0.07085\",\n
+        \       \"joy\": \"0.602479\",\n        \"sadness\": \"0.120496\"\n    }\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:01:31 GMT
+  recorded_at: Wed, 07 Jun 2017 09:23:02 GMT
 recorded_with: VCR 2.9.3

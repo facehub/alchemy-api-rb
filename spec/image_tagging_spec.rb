@@ -9,7 +9,7 @@ describe AlchemyAPI, 'image_tagging' do
 
   describe '#search' do
     {
-      url: 'http://demo1.alchemyapi.com/images/vision/emaxfpo.jpg'
+      url: 'http://blog.caranddriver.com/wp-content/uploads/2017/01/2017-EC-Small-Cars-Honda-Civic-hatchback.jpg'
     }.each do |type, value|
       [:json].each do |output_mode|
         before do
@@ -21,7 +21,6 @@ describe AlchemyAPI, 'image_tagging' do
             cassette_name = "image_tagging_basic_#{type}_#{output_mode}_search"
             VCR.use_cassette(cassette_name) do
               result = subject.search(type => value)
-
               result.must_be_instance_of Array
             end
           end

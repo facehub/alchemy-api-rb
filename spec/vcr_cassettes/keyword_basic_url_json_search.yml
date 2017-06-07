@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&outputMode=json&url=http%3A%2F%2Fwww.google.com
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,26 +16,24 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:01:04 GMT
+      - Wed, 07 Jun 2017 09:23:04 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2534'
+      - '2813'
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Key:
       - ALCHEMY_KEY
       X-Alchemyapi-Params:
       - sentiment=0&knowledgeGraph=0&detectedLanguage=english&submitLanguage=detect
       X-Alchemyapi-Raw-Content-Size:
-      - '46181'
+      - '46821'
       X-Alchemyapi-Requested-Url:
       - http://www.google.com
       X-Alchemyapi-Retrieved-Url:
@@ -43,11 +41,25 @@ http_interactions:
       X-Alchemyapi-Status:
       - OK
       X-Alchemyapi-Text-Content-Size:
-      - '430'
+      - '493'
       X-Alchemyapi-Total-Transactions:
       - '1'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -55,36 +67,40 @@ http_interactions:
         by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
         \   \"url\": \"http://www.google.com/\",\n    \"totalTransactions\": \"1\",\n
         \   \"language\": \"english\",\n    \"keywords\": [\n        {\n            \"relevance\":
-        \"0.998205\",\n            \"text\": \"Advanced search Language\"\n        },\n
-        \       {\n            \"relevance\": \"0.994025\",\n            \"text\":
-        \"Advertising\\u00A0Programs Business\"\n        },\n        {\n            \"relevance\":
-        \"0.936368\",\n            \"text\": \"Google\\n Google+\"\n        },\n        {\n
-        \           \"relevance\": \"0.827103\",\n            \"text\": \"YouTube
-        \ \\nNews\"\n        },\n        {\n            \"relevance\": \"0.801334\",\n
-        \           \"text\": \"+Google About Google\"\n        },\n        {\n            \"relevance\":
-        \"0.722936\",\n            \"text\": \"Search settings\"\n        },\n        {\n
-        \           \"relevance\": \"0.696956\",\n            \"text\": \"Finance
-        \\nPhotos\"\n        },\n        {\n            \"relevance\": \"0.684559\",\n
+        \"0.988006\",\n            \"text\": \"Google\\n Google+\"\n        },\n        {\n
+        \           \"relevance\": \"0.941866\",\n            \"text\": \"quick photo
+        books\"\n        },\n        {\n            \"relevance\": \"0.930723\",\n
+        \           \"text\": \"Advertising\\u00A0Programs Business\"\n        },\n
+        \       {\n            \"relevance\": \"0.922242\",\n            \"text\":
+        \"Advanced search Language\"\n        },\n        {\n            \"relevance\":
+        \"0.844231\",\n            \"text\": \"Google Photos\"\n        },\n        {\n
+        \           \"relevance\": \"0.839129\",\n            \"text\": \"+Google
+        About Google\"\n        },\n        {\n            \"relevance\": \"0.772138\",\n
+        \           \"text\": \"YouTube  \\nNews\"\n        },\n        {\n            \"relevance\":
+        \"0.689021\",\n            \"text\": \"Search settings\"\n        },\n        {\n
+        \           \"relevance\": \"0.663211\",\n            \"text\": \"Finance
+        \\nPhotos\"\n        },\n        {\n            \"relevance\": \"0.657415\",\n
         \           \"text\": \"Account Options\"\n        },\n        {\n            \"relevance\":
-        \"0.682571\",\n            \"text\": \"Web History\"\n        },\n        {\n
-        \           \"relevance\": \"0.49099\",\n            \"text\": \"Wallet\"\n
-        \       },\n        {\n            \"relevance\": \"0.482966\",\n            \"text\":
-        \"Gmail\"\n        },\n        {\n            \"relevance\": \"0.465137\",\n
+        \"0.656739\",\n            \"text\": \"Web History\"\n        },\n        {\n
+        \           \"relevance\": \"0.462834\",\n            \"text\": \"Wallet\"\n
+        \       },\n        {\n            \"relevance\": \"0.455243\",\n            \"text\":
+        \"Gmail\"\n        },\n        {\n            \"relevance\": \"0.441113\",\n
         \           \"text\": \"Docs\"\n        },\n        {\n            \"relevance\":
-        \"0.455968\",\n            \"text\": \"Translate\"\n        },\n        {\n
-        \           \"relevance\": \"0.441582\",\n            \"text\": \"Blogger\"\n
-        \       },\n        {\n            \"relevance\": \"0.404251\",\n            \"text\":
-        \"Privacy\"\n        },\n        {\n            \"relevance\": \"0.368026\",\n
-        \           \"text\": \"Images\"\n        },\n        {\n            \"relevance\":
-        \"0.364239\",\n            \"text\": \"Maps\"\n        },\n        {\n            \"relevance\":
-        \"0.363855\",\n            \"text\": \"Play\"\n        },\n        {\n            \"relevance\":
-        \"0.362442\",\n            \"text\": \"Drive\"\n        },\n        {\n            \"relevance\":
-        \"0.362063\",\n            \"text\": \"Calendar\"\n        },\n        {\n
-        \           \"relevance\": \"0.360932\",\n            \"text\": \"Books\"\n
-        \       },\n        {\n            \"relevance\": \"0.360183\",\n            \"text\":
-        \"Shopping\"\n        },\n        {\n            \"relevance\": \"0.35894\",\n
-        \           \"text\": \"Videos\"\n        },\n        {\n            \"relevance\":
-        \"0.354867\",\n            \"text\": \"Terms\"\n        }\n    ]\n}\r\n"
+        \"0.432406\",\n            \"text\": \"Translate\"\n        },\n        {\n
+        \           \"relevance\": \"0.420448\",\n            \"text\": \"Blogger\"\n
+        \       },\n        {\n            \"relevance\": \"0.387342\",\n            \"text\":
+        \"Privacy\"\n        },\n        {\n            \"relevance\": \"0.380129\",\n
+        \           \"text\": \"Father\"\n        },\n        {\n            \"relevance\":
+        \"0.363652\",\n            \"text\": \"Images\"\n        },\n        {\n            \"relevance\":
+        \"0.360143\",\n            \"text\": \"Maps\"\n        },\n        {\n            \"relevance\":
+        \"0.359817\",\n            \"text\": \"Play\"\n        },\n        {\n            \"relevance\":
+        \"0.358646\",\n            \"text\": \"Drive\"\n        },\n        {\n            \"relevance\":
+        \"0.358324\",\n            \"text\": \"Calendar\"\n        },\n        {\n
+        \           \"relevance\": \"0.356725\",\n            \"text\": \"Shopping\"\n
+        \       },\n        {\n            \"relevance\": \"0.355679\",\n            \"text\":
+        \"Videos\"\n        },\n        {\n            \"relevance\": \"0.351243\",\n
+        \           \"text\": \"Easy\"\n        },\n        {\n            \"relevance\":
+        \"0.35118\",\n            \"text\": \"Terms\"\n        }\n    ]\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:01:04 GMT
+  recorded_at: Wed, 07 Jun 2017 09:23:04 GMT
 recorded_with: VCR 2.9.3

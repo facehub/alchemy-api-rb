@@ -8,7 +8,7 @@ http_interactions:
       string: apikey=ALCHEMY_KEY&html=%3Chtml%3E%3Cbody%3Efoo+bar%3C%2Fbody%3E%3C%2Fhtml%3E&outputMode=json
     headers:
       User-Agent:
-      - Faraday v0.11.0
+      - Faraday v0.12.1
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -16,10 +16,8 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 14 Feb 2017 11:00:52 GMT
+      - Wed, 07 Jun 2017 09:23:08 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -27,9 +25,9 @@ http_interactions:
       Connection:
       - keep-alive
       Cache-Control:
-      - no-cache
+      - no-cache, no-store
       X-Alchemyapi-Currentversion:
-      - 12.83a
+      - '12.87'
       X-Alchemyapi-Html-Content-Size:
       - '33'
       X-Alchemyapi-Key:
@@ -42,6 +40,20 @@ http_interactions:
       - '1'
       Access-Control-Allow-Origin:
       - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'none'
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
       encoding: ASCII-8BIT
       string: "{\r\n    \"status\": \"OK\",\r\n    \"usage\": \"By accessing AlchemyAPI
@@ -49,5 +61,5 @@ http_interactions:
         by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html\",\r\n
         \   \"url\": \"\",\r\n    \"language\": \"english\",\r\n    \"text\": \"\"\r\n}\r\n"
     http_version: 
-  recorded_at: Tue, 14 Feb 2017 11:00:52 GMT
+  recorded_at: Wed, 07 Jun 2017 09:23:08 GMT
 recorded_with: VCR 2.9.3
