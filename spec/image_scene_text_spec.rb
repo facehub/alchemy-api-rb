@@ -21,8 +21,7 @@ describe AlchemyAPI, 'image_scene_text' do
             cassette_name = "image_scene_text_basic_#{type}_#{output_mode}_search"
             VCR.use_cassette(cassette_name) do
               result = subject.search(type => value)
-              puts result.inspect
-              #result.must_be_instance_of Array
+              result.must_be_instance_of Array
             end
           end
 

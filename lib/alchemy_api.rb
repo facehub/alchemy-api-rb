@@ -30,12 +30,20 @@ module AlchemyAPI
     block_given? ? yield(Config) : Config
   end
 
-  def self.key
+  def self.alchemy_key
     Config.apikey
   end
 
-  def self.key=(value)
+  def self.alchemy_key=(value)
     Config.apikey = value
+  end
+
+  def self.bluemix_key
+    Config.bluemix_apikey
+  end
+
+  def self.bluemix_key(value)
+    Config.bluemix_apikey = value
   end
 
   def self.search(mode, opts)
