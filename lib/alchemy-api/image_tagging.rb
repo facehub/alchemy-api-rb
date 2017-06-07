@@ -9,7 +9,7 @@ module AlchemyAPI
 
     def search(opts)
       check_options(opts)
-      body = { apikey: Config.apikey }.merge!(merged_options(options))
+      body = { apikey: Config.bluemix_apikey }.merge!(merged_options(options))
       @response = connection.get(path, body)
       parsed_response
     end

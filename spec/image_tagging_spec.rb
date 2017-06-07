@@ -2,7 +2,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 
 describe AlchemyAPI, 'image_tagging' do
   before do
-    AlchemyAPI::Config.apikey = API_KEY
+    AlchemyAPI::Config.bluemix_apikey = API_KEY
   end
 
   subject { AlchemyAPI::ImageTagging.new }

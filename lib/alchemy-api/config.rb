@@ -1,6 +1,7 @@
 module AlchemyAPI
   class Config
     class << self
+      attr_accessor :bluemix_apikey
       attr_accessor :apikey
       attr_accessor :modes
     end
