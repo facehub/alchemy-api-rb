@@ -1,35 +1,35 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://access.alchemyapi.com/calls/url/URLGetRankedImageSceneText
+    method: get
+    uri: https://gateway-a.watsonplatform.net/visual-recognition/api/v3/recognize_text?apikey=ALCHEMY_KEY&url=https://www.scenicwonders.com/wp-content/uploads/2011/03/Yosemite-National-Park-sign-by-Acradenia.jpg&version=2016-05-20
     body:
-      encoding: UTF-8
-      string: apikey=ALCHEMY_KEY&outputMode=json&url=https%3A%2F%2Fwww.scenicwonders.com%2Fwp-content%2Fuploads%2F2011%2F03%2FYosemite-National-Park-sign-by-Acradenia.jpg
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v0.12.1
-      Content-Type:
-      - application/x-www-form-urlencoded
   response:
     status:
-      code: 404
+      code: 200
       message: ''
     headers:
       Date:
-      - Wed, 07 Jun 2017 09:23:04 GMT
+      - Wed, 07 Jun 2017 12:34:17 GMT
       Content-Type:
-      - text/html; charset=utf-8
+      - application/json
       Content-Length:
-      - '162'
+      - '1486'
       Connection:
       - keep-alive
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Allow-Origin:
+      - "*"
       X-Xss-Protection:
       - 1; mode=block
       Content-Security-Policy:
       - default-src 'none'
-      Cache-Control:
-      - no-cache, no-store
       Pragma:
       - no-cache
       Expires:
@@ -42,8 +42,52 @@ http_interactions:
       - max-age=31536000
     body:
       encoding: ASCII-8BIT
-      string: "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>404
-        Not Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+      string: |
+        {
+            "images": [
+                {
+                    "resolved_url": "https://www.scenicwonders.com/wp-content/uploads/2011/03/Yosemite-National-Park-sign-by-Acradenia.jpg",
+                    "source_url": "https://www.scenicwonders.com/wp-content/uploads/2011/03/Yosemite-National-Park-sign-by-Acradenia.jpg",
+                    "text": "[yosemite]\nnational\npark",
+                    "words": [
+                        {
+                            "line_number": 0,
+                            "location": {
+                                "height": 60,
+                                "left": 607,
+                                "top": 289,
+                                "width": 224
+                            },
+                            "score": 0.4564,
+                            "word": "yosemite"
+                        },
+                        {
+                            "line_number": 1,
+                            "location": {
+                                "height": 41,
+                                "left": 606,
+                                "top": 362,
+                                "width": 224
+                            },
+                            "score": 0.9564,
+                            "word": "national"
+                        },
+                        {
+                            "line_number": 2,
+                            "location": {
+                                "height": 39,
+                                "left": 661,
+                                "top": 431,
+                                "width": 117
+                            },
+                            "score": 0.964,
+                            "word": "park"
+                        }
+                    ]
+                }
+            ],
+            "images_processed": 1
+        }
     http_version: 
-  recorded_at: Wed, 07 Jun 2017 09:23:04 GMT
+  recorded_at: Wed, 07 Jun 2017 12:34:18 GMT
 recorded_with: VCR 2.9.3

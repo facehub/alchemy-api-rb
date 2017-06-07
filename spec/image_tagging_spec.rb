@@ -30,7 +30,7 @@ describe AlchemyAPI, 'image_tagging' do
             VCR.use_cassette(cassette_name) do
               result = subject.search(type => value)[0]
 
-              result['text'].wont_be_nil
+              result['class'].wont_be_nil
               result['score'].wont_be_nil
             end
           end

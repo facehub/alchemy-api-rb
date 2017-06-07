@@ -1,19 +1,52 @@
 module AlchemyAPI
+
   class ImageSceneText < Base
     Config.add_mode :image_scene_text, self
 
     def web_method
-      "#{method_prefix}GetRankedImageSceneText"
+      'v3/recognize_text'
+    end
+
+    def search(opts)
+      check_options(opts)
+      body = { apikey: Config.apikey }.merge!(merged_options(options))
+      @response = connection.get(path, body)
+      parsed_response.each { |item| item['text'] = item.delete('class') }
+    end
+
+    def parsed_response
+      case Config.output_mode
+        when :json
+          parsed = JSON.parse(@response.body)
+          parsed[indexer].first['words'] rescue nil
+        when :xml
+        when :rdf
+          fail NotImplementedError
+      end
     end
 
     private
+
+    def path
+      "visual-recognition/api/#{web_method}"
+    end
+
+    def get_base_url
+      'https://gateway-a.watsonplatform.net/'
+    end
+
+
+    def merged_options(opts = {})
+      opts.merge({version: '2016-05-20'})
+    end
 
     def supported_search_types
       [:url]
     end
 
     def indexer
-      "sceneTextLines"
+      'images'
     end
   end
+
 end

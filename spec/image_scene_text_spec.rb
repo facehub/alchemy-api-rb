@@ -31,9 +31,8 @@ describe AlchemyAPI, 'image_scene_text' do
             VCR.use_cassette(cassette_name) do
               result = subject.search(type => value)[0]
 
-              result['text'].wont_be_nil
-              result['words'].wont_be_nil
-              result['confidence'].wont_be_nil
+              result['score'].wont_be_nil
+              result['word'].wont_be_nil
             end
           end
         end
