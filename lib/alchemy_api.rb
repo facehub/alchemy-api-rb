@@ -42,7 +42,7 @@ module AlchemyAPI
     Config.bluemix_apikey
   end
 
-  def self.bluemix_key(value)
+  def self.bluemix_key=(value)
     Config.bluemix_apikey = value
   end
 

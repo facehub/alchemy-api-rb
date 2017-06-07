@@ -7,11 +7,18 @@ describe AlchemyAPI do
     AlchemyAPI::BASE_URL.must_be :==, 'https://access.alchemyapi.com/calls/'
   end
 
-  it 'allows you to set the key directly' do
+  it 'allows you to set the alchemy key directly' do
     key = 'xxxxxxxx'
     AlchemyAPI.alchemy_key = key
 
     AlchemyAPI.alchemy_key.must_be :==, key
+  end
+
+  it 'allows you to set the bluemix key directly' do
+    key = 'xxxxxxxx'
+    AlchemyAPI.bluemix_key = key
+
+    AlchemyAPI.bluemix_key.must_be :==, key
   end
 
   describe AlchemyAPI::Config do
