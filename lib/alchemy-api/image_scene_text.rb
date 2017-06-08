@@ -11,7 +11,7 @@ module AlchemyAPI
       check_options(opts)
       body = { apikey: Config.bluemix_apikey }.merge!(merged_options(options))
       @response = connection.get(path, body)
-      parsed_response.each { |item| item['text'] = item.delete('class') }
+      parsed_response
     end
 
     def parsed_response
