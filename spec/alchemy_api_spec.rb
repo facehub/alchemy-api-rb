@@ -25,6 +25,20 @@ describe AlchemyAPI do
     AlchemyAPI.bluemix_key.must_be :==, key
   end
 
+  it 'allows you to set the alchemy key directly as array' do
+    key = ['xxxxxxxx']
+    AlchemyAPI.alchemy_key = key
+
+    AlchemyAPI.alchemy_key.must_be :==, key.first
+  end
+
+  it 'allows you to set the bluemix key directly as array' do
+    key = ['xxxxxxxx']
+    AlchemyAPI.bluemix_key = key
+
+    AlchemyAPI.bluemix_key.must_be :==, key.first
+  end
+
   it 'round robin on array of key for alchemy key' do
     key = ['1','2','3']
     AlchemyAPI.alchemy_key = key
