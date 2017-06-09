@@ -20,6 +20,7 @@ require 'alchemy-api/emotion_analysis'
 require 'alchemy-api/image_scene_text'
 
 module AlchemyAPI
+
   BASE_URL = 'https://access.alchemyapi.com/calls/'
 
   def self.config
@@ -31,7 +32,15 @@ module AlchemyAPI
   end
 
   def self.alchemy_key
-    Config.apikey
+    if !Config.apikey.is_a? Array
+      return Config.apikey
+    end
+    @@apikey_mutex ||= Mutex.new
+    @@apikey_mutex.synchronize do
+      @@apikey_idx ||= -1
+      @@apikey_idx = (@@apikey_idx + 1) % Config.apikey.size
+      Config.apikey[@@apikey_idx]
+    end
   end
 
   def self.alchemy_key=(value)
@@ -39,11 +48,27 @@ module AlchemyAPI
   end
 
   def self.bluemix_key
-    Config.bluemix_apikey
+    if !Config.bluemix_apikey.is_a? Array
+      return Config.bluemix_apikey
+    end
+    @@bluemix_mutex ||= Mutex.new
+    @@bluemix_mutex.synchronize do
+      @@bluemix_apikey_idx ||= -1
+      @@bluemix_apikey_idx = (@@bluemix_apikey_idx + 1) % Config.bluemix_apikey.size
+      Config.bluemix_apikey[@@bluemix_apikey_idx]
+    end
   end
 
   def self.bluemix_key=(value)
     Config.bluemix_apikey = value
+  end
+
+  def self.bluemix_apikey_idx
+    @@bluemix_apikey_idx
+  end
+
+  def self.bluemix_apikey_idx=(value)
+    @@bluemix_apikey_idx = value
   end
 
   def self.search(mode, opts)

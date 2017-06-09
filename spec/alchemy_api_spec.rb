@@ -3,6 +3,10 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 describe AlchemyAPI do
   subject { AlchemyAPI }
 
+  before do
+    AlchemyAPI.bluemix_apikey_idx = -1
+  end
+
   it 'knows the secure alchemy api url' do
     AlchemyAPI::BASE_URL.must_be :==, 'https://access.alchemyapi.com/calls/'
   end
@@ -20,6 +24,51 @@ describe AlchemyAPI do
 
     AlchemyAPI.bluemix_key.must_be :==, key
   end
+
+  it 'round robin on array of key for alchemy key' do
+    key = ['1','2','3']
+    AlchemyAPI.alchemy_key = key
+
+    key.map { |key| key.must_be :==, AlchemyAPI.alchemy_key }
+    #moar tests
+    (key.size * 100).times do |idx|
+      key[idx % key.size].must_be :==, AlchemyAPI.alchemy_key
+    end
+
+  end
+
+  it 'round robin on array of key for bluemix key' do
+    key = ['1','2','3']
+    AlchemyAPI.bluemix_key = key
+
+    key.map { |key| key.must_be :==, AlchemyAPI.bluemix_key }
+
+    #moar tests
+    (key.size * 100).times do |idx|
+      key[idx % key.size].must_be :==, AlchemyAPI.bluemix_key
+    end
+
+  end
+
+  # todo multithread test?
+  # it 'round robin on array of key with multithreads for bluemix key' do
+  #   THREADS = 10
+  #   KEY_REQUESTS = 100
+  #   KEYS = [*0...(THREADS * KEY_REQUESTS)]
+  #   AlchemyAPI.bluemix_key = KEYS
+  #
+  #   threads = []
+  #   keys = []
+  #   THREADS.times do |idx|
+  #     threads << Thread.new do
+  #       KEY_REQUESTS.times do
+  #         keys << AlchemyAPI.bluemix_key
+  #       end
+  #     end
+  #   end
+  #   threads.each &:join
+  #   keys.must_be :==, KEYS
+  # end
 
   describe AlchemyAPI::Config do
     describe '.add_mode' do
