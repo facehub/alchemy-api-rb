@@ -17,15 +17,32 @@ module AlchemyAPI
     def parsed_response
       case Config.output_mode
         when :json
-          parsed = JSON.parse(@response.body)
-          parsed[indexer] rescue nil
+          begin
+            parsed = JSON.parse(@response.body)
+            parsed[indexer] rescue nil
+          rescue Exception => e
+            {}
+          end
         when :xml
         when :rdf
           fail NotImplementedError
       end
     end
 
-    private
+    private    def parsed_response
+      case Config.output_mode
+        when :json
+          begin
+            parsed = JSON.parse(@response.body)
+            parsed[indexer] rescue nil
+          rescue Exception => e
+            {}
+          end
+        when :xml
+        when :rdf
+          fail NotImplementedError
+      end
+    end
 
     def path
       "visual-recognition/api/#{web_method}"

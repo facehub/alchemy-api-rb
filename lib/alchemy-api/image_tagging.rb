@@ -9,7 +9,7 @@ module AlchemyAPI
 
     def search(opts)
       check_options(opts)
-      body = { apikey: Config.bluemix_apikey }.merge!(merged_options(options))
+      body = {apikey: Config.bluemix_apikey}.merge!(merged_options(options))
       @response = connection.get(path, body)
       parsed_response
     end
@@ -17,8 +17,12 @@ module AlchemyAPI
     def parsed_response
       case Config.output_mode
         when :json
-          parsed = JSON.parse(@response.body)
-          parsed[indexer].first['classifiers'].first['classes'] rescue nil
+          begin
+            parsed = JSON.parse(@response.body)
+            parsed[indexer].first['classifiers'].first['classes'] rescue nil
+          rescue Exception => e
+            {}
+          end
         when :xml
         when :rdf
           fail NotImplementedError

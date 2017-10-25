@@ -44,6 +44,7 @@ module AlchemyAPI
   end
 
   def self.alchemy_key=(value)
+    @@apikey_idx = -1
     Config.apikey = value
   end
 
@@ -60,6 +61,7 @@ module AlchemyAPI
   end
 
   def self.bluemix_key=(value)
+    @@bluemix_apikey_idx = -1
     Config.bluemix_apikey = value
   end
 

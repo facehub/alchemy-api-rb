@@ -40,26 +40,27 @@ describe AlchemyAPI do
   end
 
   it 'round robin on array of key for alchemy key' do
-    key = ['1','2','3']
-    AlchemyAPI.alchemy_key = key
+    keys = ['1','2','3']
+    AlchemyAPI.alchemy_key = keys
 
-    key.map { |key| key.must_be :==, AlchemyAPI.alchemy_key }
-    #moar tests
-    (key.size * 100).times do |idx|
-      key[idx % key.size].must_be :==, AlchemyAPI.alchemy_key
+    keys.map { |key| key.must_be :==, AlchemyAPI.alchemy_key }
+
+    # moar tests
+    (keys.size).times do |idx|
+      keys[idx % keys.size].must_be :==, AlchemyAPI.alchemy_key
     end
 
   end
 
   it 'round robin on array of key for bluemix key' do
-    key = ['1','2','3']
-    AlchemyAPI.bluemix_key = key
+    keys = ['1','2','3']
+    AlchemyAPI.bluemix_key = keys
 
-    key.map { |key| key.must_be :==, AlchemyAPI.bluemix_key }
+    keys.map { |key| key.must_be :==, AlchemyAPI.bluemix_key }
 
-    #moar tests
-    (key.size * 100).times do |idx|
-      key[idx % key.size].must_be :==, AlchemyAPI.bluemix_key
+    # moar tests
+    (keys.size * 100).times do |idx|
+      keys[idx % keys.size].must_be :==, AlchemyAPI.bluemix_key
     end
 
   end
